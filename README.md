@@ -7,7 +7,7 @@ Resulting html is a solid markup with inline styles.
 
 After generation you can save result to github-pages or even send html file by email.
 
-* [Demo source](https://raw.github.com/chibisov/backdoc/blob/master/demo/demo.md)
+* [Demo source](https://raw.github.com/chibisov/backdoc/master/demo/demo.md)
 * [Demo result](http://chibisov.github.io/backdoc/demo/demo.html)
 
 ## Usage
