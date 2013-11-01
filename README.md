@@ -27,10 +27,10 @@ After generation you can save result to github-pages or even send html file by e
 For simplicity sake `backdoc.py` script should be solid python script, without any requirements to install.  
 If you add any third-party libraries you should download theme to `src` folder.  
 
-There is a folder, where all source files keeped. After dowload you should add compilation logic to `compile.py`.
+This is a folder, where all source files keeped. After dowload you should add compilation logic to `compile.py`.
 
 Development algorithm:
 
-    1 Write code to src/backdoc.py
-    2 Run `python compile.py`
-    3 Commit
+    1. Write code to src/backdoc.py
+    2. Run `python compile.py`
+    3. Commit
