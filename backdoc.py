@@ -2330,7 +2330,7 @@ template = u'''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yandex.Technologies API</title>
+    <title>Documentation</title>
     <style type="text/css">
 /*!
  * Bootstrap v3.0.0
