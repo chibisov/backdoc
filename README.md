@@ -12,16 +12,15 @@ After generation you can save result to github-pages or even send html file by e
 
 ## Usage
 
-    $ wget https://github.com/chibisov/backdoc/master/backdoc.py
+    $ wget https://raw.github.com/chibisov/backdoc/master/backdoc.py
     $ python backdoc.py doc.md > doc.html
     $ # or
     $ echo "# Hello" | python backdoc.py > doc.html
 
 ## Usage without installation
 
-    $ curl https://raw.github.com/chibisov/backdoc/master/backdoc.py | python doc.md > doc.html
-    $ # or
-    $ echo "# Hello " curl https://raw.github.com/chibisov/backdoc/master/backdoc.py | python > doc.html
+    $ echo "# Hello" | python -c "$(curl https://raw.github.com/chibisov/backdoc/master/backdoc.py)" > doc.html
+
 
 ## Development process
 
