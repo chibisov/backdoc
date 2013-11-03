@@ -1,5 +1,7 @@
 ### Introduction
 
+This is a demo for [Backdoc](https://github.com/chibisov/backdoc) - tool for backbone-like documentation generation.
+
 When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
 
 ### Events

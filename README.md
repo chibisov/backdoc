@@ -13,7 +13,7 @@ After generation you can save result to github-pages or even send html file by e
 ## Usage
 
     $ wget https://raw.github.com/chibisov/backdoc/master/backdoc.py
-    $ python backdoc.py doc.md > doc.html
+    $ python backdoc.py --source doc.md > doc.html
     $ # or
     $ echo "# Hello" | python backdoc.py > doc.html
 
@@ -21,20 +21,45 @@ After generation you can save result to github-pages or even send html file by e
 
     $ echo "# Hello" | python -c "$(curl https://raw.github.com/chibisov/backdoc/master/backdoc.py)" > doc.html
 
+## Input parameters:
+
+* `-s`, `--source` - markdown source file path
+* `-t`, `--title` - documentation title header
+
+Example - generate documentation from `~/doc.md` with title `Backbone documentantion` to `~/doc.html` file:
+
+    $ python backdoc.py --source ~/doc.md --title "Backbone documentation" > ~/doc.html
+
+Or using short names:
+
+    $ python backdoc.py -s ~/doc.md -t "Backbone documentation" > ~/doc.html
+
+
+## Requirements
+
+Python >= 2.7. Not tested under 3.x versions
 
 ## Development process
 
 For simplicity sake `backdoc.py` script should be solid python script, without any requirements to install.  
 If you add any third-party libraries you should download theme to `src` folder.  
 
-This is a folder, where all source files keeped. After dowload you should add compilation logic to `compile.py`.
+This is the folder, where all source files keeped. After dowload you should add compilation logic to `compile.py`.
 
 Development algorithm:
 
     1. Write code to src/backdoc.py
     2. Run `python compile.py`
-    3. Commit
+    3. Regenerate demo with `python backdoc.py --source demo/demo.md --title "Backdoc demo" > demo/demo.html`
+    4. Commit
 
-## Todo
+How to test:
 
-    * Title as a param
+    $ cd src/
+    $ python tests.py
+
+## Changelog
+
+* 2013-11-03:
+    - Added title param
+    - Added unit tests
