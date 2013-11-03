@@ -5,7 +5,7 @@ template_src = "template = u'''{0}'''".format(open('./src/template.html', 'r').r
 
 compiled_src = (
     src.replace('from markdown2 import Markdown', markdown2_src)
-       .replace("template = open('./template.html', 'r').read()", template_src)
+       .replace("template_html = open('./template.html', 'r').read()", template_src)
 )
 
 compile_to = open('./backdoc.py', 'w')

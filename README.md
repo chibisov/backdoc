@@ -21,6 +21,23 @@ After generation you can save result to github-pages or even send html file by e
 
     $ echo "# Hello" | python -c "$(curl https://raw.github.com/chibisov/backdoc/master/backdoc.py)" > doc.html
 
+## Input parameters:
+
+* `-s`, `--source` - markdown source file path
+* `-t`, `--title` - documentation title header
+
+Example - generate documentation from `~/doc.md` with title `Backbone documentantion` to `~/doc.html` file:
+
+    $ python backdoc.py --source ~/doc.md --title Backbone documentation > ~/doc.html
+
+Or using short names:
+
+    $ python backdoc.py -s ~/doc.md -t Backbone documentation > ~/doc.html
+
+If first param has no name it alway source file path:
+
+    $ python backdoc.py ~/doc.md -t Backbone documentation > ~/doc.html
+
 
 ## Development process
 
@@ -35,6 +52,13 @@ Development algorithm:
     2. Run `python compile.py`
     3. Commit
 
-## Todo
+How to test:
 
-    * Title as a param
+    $ cd src/tests/
+    $ python tests.py
+
+## Changelog
+
+* 2013-11-03:
+    - Added title param
+    - Added unit tests
