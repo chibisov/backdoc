@@ -10,6 +10,8 @@ After generation you can save result to github-pages or even send html file by e
 * [Demo source](https://raw.github.com/chibisov/backdoc/master/demo/demo.md)
 * [Demo result](http://chibisov.github.io/backdoc/demo/demo.html)
 
+![screen](http://chibisov.github.io/backdoc/demo/screen.png "Screen")
+
 ## Usage
 
     $ wget https://raw.github.com/chibisov/backdoc/master/backdoc.py
