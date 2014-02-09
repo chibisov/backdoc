@@ -3,7 +3,7 @@
 Backdoc is a tool for backbone-like documentation generation.
 Backdoc main goal is to help to generate one page documentation from one markdown source file.  
 
-Resulting html is a solid markup with inline styles.  
+Resulting html is a solid markup with inline styles and responsive template.
 
 After generation you can save result to github-pages or even send html file by email.
 
@@ -11,6 +11,11 @@ After generation you can save result to github-pages or even send html file by e
 * [Demo result](http://chibisov.github.io/backdoc/demo/demo.html)
 
 ![screen](http://chibisov.github.io/backdoc/demo/screen.png "Screen")
+![screen iphone](http://chibisov.github.io/backdoc/demo/screen_iphone.png "Screen iphone")
+
+Real world examples:
+
+* [DRF-extensions documentation](http://chibisov.github.io/drf-extensions/docs/)
 
 ## Usage
 
@@ -46,7 +51,7 @@ Python >= 2.7. Not tested under 3.x versions
 For simplicity sake `backdoc.py` script should be solid python script, without any requirements to install.  
 If you add any third-party libraries you should download theme to `src` folder.  
 
-This is the folder, where all source files keeped. After dowload you should add compilation logic to `compile.py`.
+This is the folder, where all source files kept. After dowload you should add compilation logic to `compile.py`.
 
 Development algorithm:
 
@@ -61,6 +66,10 @@ How to test:
     $ python tests.py
 
 ## Changelog
+
+* 2014-02-09:
+    - Added responsiveness
+    - Added anchors
 
 * 2013-11-03:
     - Added title param

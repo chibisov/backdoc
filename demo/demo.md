@@ -63,14 +63,16 @@ _Brief aside on `super`: JavaScript does not provide a simple way to call super 
 
 #### constructor / initialize
 
-When creating an instance of a model, you can pass in the initial values of the __attributes__, which will be set on the model. If you define an __initialize__ function, it will be invoked when the model is created.
+When creating an instance of a model, you can pass in the initial values of the __attributes__, which will be set on the model. If you define an __initialize__ function, it will be invoked when the model is created. Init could be called with `one.two.three.four.five.six.seven.eight.nine.ten.eleven`
 
 
 ### Change Log
 
 __1.1.0__ — _Oct. 10, 2013_
 
-* Made the return values of Collection's `set`, `add`, `remove`, and `reset` more useful. Instead of returning `this`, they now return the changed (added, removed or updated) model or list of models.
+* Made the return values of Collection's `set`, `add`, `remove`, and `reset` more useful. Instead of returning `this`, they now return the changed (added, removed or updated) model or list of models:
+    * **List** inside list 1
+    * **List** inside list 2
 * Backbone Views no longer automatically attach options passed to the constructor as `this.options`, but you can do it yourself if you prefer.
 
 __1.0.0__ — _March 20, 2013_
