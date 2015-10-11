@@ -13,10 +13,15 @@ from markdown2 import Markdown
 
 
 template_html = open('./template.html', 'r').read()
-
+PY3 = sys.version_info[0] == 3
 
 def force_text(text):
-    if isinstance(text, unicode):
+    if PY3:
+        type = str
+    else:
+        type = unicode
+
+    if isinstance(text, type):
         return text
     else:
         return text.decode('utf-8')
@@ -32,7 +37,12 @@ class BackDoc(object):
 
     def run(self, argv):
         kwargs = self.get_kwargs(argv)
-        self.stdout.write(self.get_result_html(**kwargs).encode('utf-8'))
+        str_bytes = self.get_result_html(**kwargs)
+        if PY3:
+            output = str_bytes
+        else:
+            output = str_bytes.encode('utf-8')
+        self.stdout.write(output)
 
     def get_kwargs(self, argv):
         parsed = dict(self.parser.parse_args(argv)._get_kwargs())
