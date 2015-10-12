@@ -67,10 +67,13 @@ How to test:
 
 ## Changelog
 
-* 2014-02-09:
+* Oct. 12, 2015:
+    - [Got rid of redundant Bootstrap styles](https://github.com/chibisov/backdoc/pull/3)
+
+* Sen. 9, 2014:
     - Added responsiveness
     - Added anchors
 
-* 2013-11-03:
+* Mar. 13, 2013:
     - Added title param
     - Added unit tests
