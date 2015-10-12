@@ -44,7 +44,7 @@ Or using short names:
 
 ## Requirements
 
-Python >= 2.7. Not tested under 3.x versions
+Python >=2.7 and 3.x
 
 ## Development process
 
@@ -68,6 +68,7 @@ How to test:
 ## Changelog
 
 * Oct. 12, 2015:
+    - [Added Python 3 support](https://github.com/chibisov/backdoc/pull/4)
     - [Got rid of Zepto in favor of vanilla JS](https://github.com/chibisov/backdoc/pull/5)
     - [Got rid of redundant Bootstrap styles](https://github.com/chibisov/backdoc/pull/3)
 
