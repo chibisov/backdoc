@@ -68,6 +68,7 @@ How to test:
 ## Changelog
 
 * Oct. 12, 2015:
+    - [Got rid of Zepto in favor of vanilla JS](https://github.com/chibisov/backdoc/pull/5)
     - [Got rid of redundant Bootstrap styles](https://github.com/chibisov/backdoc/pull/3)
 
 * Sen. 9, 2014:
