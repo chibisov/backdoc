@@ -2572,10 +2572,14 @@ https://github.com/chibisov/backdoc
                 padding-left: 27px;
             }
             .force_show_sidebar .main_container {
-                display: none;
+                padding-left: 0 !important;
             }
             .force_show_sidebar .sidebar {
                 width: 100%;
+                position:fixed;
+                top:0;
+                left:0;
+                bottom:0;
             }
             .force_show_sidebar .sidebar a{
                 font-size: 1.5em;
@@ -2724,6 +2728,7 @@ https://github.com/chibisov/backdoc
             function() {
                 findOne(document, '.toggle_sidebar_button').onclick = function(){
                     toggleClass(findOne(document, 'body'), 'force_show_sidebar');
+                    return false;
                 };
 
                 // hide sidebar on every click in menu (if small screen)
@@ -2743,13 +2748,11 @@ https://github.com/chibisov/backdoc
 
                         var anchor_char = document.createElement('span');
                         addClass(anchor_char, 'anchor_char');
-                        // @todo: Find valid html symbol for anchors.
-                        anchor_char.innerHTML = '¶';
+                        anchor_char.innerHTML = '&para;';
 
                         append(item, anchor_char);
                         item.onclick = function(){
-                            // @todo: Replace with location.hash = item.getAttribute('id');
-                            window.location = '#' + item.getAttribute('id');
+                            location.hash = item.getAttribute('id');
                         };
                     }
                 });
@@ -2778,10 +2781,15 @@ https://github.com/chibisov/backdoc
     </div>
 </body>
 </html>'''
-
+PY3 = sys.version_info[0] == 3
 
 def force_text(text):
-    if isinstance(text, unicode):
+    if PY3:
+        type = str
+    else:
+        type = unicode
+
+    if isinstance(text, type):
         return text
     else:
         return text.decode('utf-8')
@@ -2797,7 +2805,12 @@ class BackDoc(object):
 
     def run(self, argv):
         kwargs = self.get_kwargs(argv)
-        self.stdout.write(self.get_result_html(**kwargs).encode('utf-8'))
+        str_bytes = self.get_result_html(**kwargs)
+        if PY3:
+            output = str_bytes
+        else:
+            output = str_bytes.encode('utf-8')
+        self.stdout.write(output)
 
     def get_kwargs(self, argv):
         parsed = dict(self.parser.parse_args(argv)._get_kwargs())
