@@ -65,6 +65,10 @@ _Brief aside on `super`: JavaScript does not provide a simple way to call super 
 
 When creating an instance of a model, you can pass in the initial values of the __attributes__, which will be set on the model. If you define an __initialize__ function, it will be invoked when the model is created. Init could be called with `one.two.three.four.five.six.seven.eight.nine.ten.eleven`
 
+### Responsive Images
+
+![1200x800](./1200x800.png)   
+![240x160](./240x160.png)   
 
 ### Change Log
 

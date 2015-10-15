@@ -2382,6 +2382,11 @@ https://github.com/chibisov/backdoc
             line-height: 1.1;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         pre {
             display: block;
             padding: 9.5px;
